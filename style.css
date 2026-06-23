@@ -240,11 +240,7 @@ h1 {
 }
 .card-item:active { transform: scale(0.92); background: rgba(255, 255, 255, 0.1); }
 
-/* ==========================================================================
-   CARD DARE UPDATING SYSTEM ARCHITECTURE HOOKS 
-   ========================================================================== */
-
-/* 1. Used/Completed Cards modification state (Triggered when drawn once before) */
+/* Used/Completed Cards modification state */
 .card-item.completed-once {
     opacity: 0.55;
     background: rgba(255, 255, 255, 0.01);
@@ -257,7 +253,7 @@ h1 {
     vertical-align: middle;
 }
 
-/* 2. Alternative Backup Challenge Reveal Layout Modifiers */
+/* Alternative Backup Challenge Reveal Layout Modifiers */
 .reveal-stage.alternate-dare-active .playing-card-3d .card-face.front {
     box-shadow: 0 0 35px #ffffff, inset 0 0 15px rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.4);
@@ -273,7 +269,6 @@ h1 {
     0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); }
     100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); }
 }
-/* ========================================================================== */
 
 /* 3D Cards Presentation Component */
 .reveal-stage { display: flex; flex-direction: column; align-items: center; perspective: 1000px; }
@@ -356,3 +351,35 @@ h1 {
 .card-grid::-webkit-scrollbar { width: 4px; }
 .card-grid::-webkit-scrollbar-track { background: transparent; }
 .card-grid::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+
+/* First Page Branding Styles */
+.footer-branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    color: #64748b;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.insta-link {
+    color: #94a3b8;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.25s ease, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.insta-link:hover {
+    color: #ff3366; /* Vibrant theme match accent shift */
+    transform: scale(1.12);
+}
+
+.insta-link:active {
+    transform: scale(0.95);
+}
