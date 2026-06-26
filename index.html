@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAREDECK | Companion Application</title>
+    <title>DAREDECK | High-Performance Dashboard</title>
+    <link rel="icon" type="image/png" href="dd.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="status-bar">
-        <div class="score-box">SCORE: <span id="stat-score">0</span></div>
+        <div class="score-box">SCORE / XP: <span id="stat-score">0</span></div>
         <div class="progress-box">COMPLETED: <span id="stat-progress">0/54</span></div>
     </div>
 
@@ -23,18 +24,18 @@
         
         <div id="screen-home" class="screen active">
             <h1>DAREDECK</h1>
-            <div class="subtitle">Companion System v2.0</div>
+            <div class="subtitle">High-Performance Framework v3.0</div>
             
             <div class="instruction-box">
-                <div class="instruction-title">Draw Phase Instructions</div>
-                <div class="instruction-desc">Shuffle your physical deck, draw any card, and announce the classification details to the dashboard matrix.</div>
+                <div class="instruction-title">Draw Phase Architecture</div>
+                <div class="instruction-desc">Shuffle your physical deck, pull any card, and declare its classification to unlock a high-value physical or studio execution challenge.</div>
             </div>
 
             <button class="btn btn-primary" onclick="navigateTo('screen-suits')">I Drew A Card</button>
-            <div class="small-note">Please ensure all local table rules are configured.</div>
+            <div class="small-note">Zero excuses. Complete what you draw.</div>
 
             <div class="footer-branding">
-                <span>Made by Barkot</span>
+                <span>Made By Barkot</span>
                 <a href="https://www.instagram.com/___barkot?igsh=dGtvcTFodThkcTdo&utm_source=qr" target="_blank" rel="noopener noreferrer" class="insta-link" aria-label="Instagram Profile">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -46,7 +47,7 @@
         </div>
 
         <div id="screen-suits" class="screen">
-            <h1>CHOOSE SUIT</h1>
+            <h1>CHOOSE DECK</h1>
             <div class="subtitle">Declare your drawn card classification</div>
 
             <div class="suit-grid">
@@ -80,8 +81,7 @@
             <h1 id="value-screen-title">VALUES</h1>
             <div class="subtitle">Select the identical matching index value code</div>
 
-            <div id="value-grid-container" class="card-grid">
-                </div>
+            <div id="value-grid-container" class="card-grid"></div>
 
             <button class="btn btn-secondary" style="margin-top:20px;" onclick="navigateTo('screen-suits')">Change Suit</button>
         </div>
@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="dare-container">
-                    <div id="dare-header-title" class="dare-title">THE DARE CHALLENGE</div>
+                    <div id="dare-header-title" class="dare-title">THE EXECUTION ACTION</div>
                     <div id="reveal-dare-text" class="dare-text">Generating challenge packet data matrix...</div>
                 </div>
 
@@ -115,11 +115,11 @@
 
         <div id="screen-celebration" class="screen">
             <div class="celebration-graphic">💎</div>
-            <h1>SUCCESS</h1>
-            <div class="subtitle">Challenge processing confirmation authorized</div>
+            <h1>DARE EXECUTED</h1>
+            <div class="subtitle">Challenge processing confirmation authorized. Gains logged.</div>
 
             <div class="summary-box">
-                <div class="summary-title">UPDATED SESSION STATUS</div>
+                <div class="summary-title">UPDATED OPERATING STATUS</div>
                 <div id="celebration-stat-summary" class="summary-stats">Score: 0 | Completed: 0</div>
             </div>
 
@@ -132,7 +132,7 @@
         const gameState = {
             score: 0,
             completedCount: 0,
-            completedCards: new Set(), // Formats unique entries explicitly as strings: "suit-rank"
+            completedCards: new Set(), 
             currentSelection: {
                 suit: null,      
                 suitSymbol: '', 
@@ -142,139 +142,139 @@
 
         const cardRanks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 
-        // Core Primary Classic Party Dare Database
+        // Core Self-Improvement and Business Growth Database
         const dareDatabase = {
             hearts: [
-                "Eat a spoonful of ketchup mixed with a spoonful of sugar right now.",
-                "Let the group look through your recent photos app for 20 seconds while you sit in silence.",
-                "Text a random friend: 'I just saw a bird that looked exactly like you' and don't reply.",
-                "Talk in a high-pitched cartoon voice until it is your turn to draw a card again.",
-                "Propose to the nearest wall or door with full romantic passion for 30 seconds.",
-                "Let the person to your left send any text they want to your 3rd recent contact.",
-                "Stare at the player across from you without blinking for 45 seconds straight.",
-                "Put your socks on your hands and keep them there for the next two rounds.",
-                "Narrate the next player's turn like a dramatic horse-racing commentator.",
-                "Try to convince the group to buy a single piece of crumpled paper for $20.",
-                "Pretend to violently weep for 30 seconds because your ice cream 'melted' (even if you don't have any).",
-                "Give a 45-second aggressive speech about why pineapples absolutely belong on pizza.",
-                "Text your parents or a sibling: 'I'm moving to the woods to live with the bears.'"
+                "Find 3 local business websites with broken mobile UX layouts. Record a brief screen-share video showing exactly how you would fix their design to increase sales. Send it to them.",
+                "Identify a prominent business on social media with weak, low-quality ad assets. Create 1 quick, premium brand mockup and cold DM it to them.",
+                "Follow up with 3 past design clients or dead professional leads. Send a clean message updating them on your latest layout work and ask if they need support.",
+                "Draft a highly polished pitch email focusing on custom web development or branding improvements. Send it to a company you genuinely want to work with.",
+                "Audit a local competitor's portfolio or website. Document exactly 2 service gaps or technical flaws they are overlooking that you can offer as a premium upsell.",
+                "Post a detailed breakdown or case study of your latest logo, barber website, or vintage studio project on LinkedIn, Behance, or your main social feed.",
+                "Send an outreach message to 2 design agencies or developer studios offering yourself as a reliable freelance asset for their overflow client work.",
+                "Find a local business running Facebook or Instagram ads with poorly designed flyers. Redesign it cleanly and drop it in their inbox as a free proof-of-concept.",
+                "Build a list of 5 high-ticket corporate or commercial business contacts in your immediate region to target for professional web development outreach.",
+                "Write a short, engaging text script explaining your core design value proposition. Practice delivering it clearly aloud 3 times without stumbling.",
+                "Search your target client niche on Google Maps. Find 3 companies with excellent ratings but completely non-existent or un-optimized web presences and cold call or email them.",
+                "Create a high-value promotional thread or post showcasing a before-and-after breakdown of a complex logo or user flow you developed.",
+                "Draft a high-ticket design proposal framework that cleanly outlines your discovery, wireframing, and launch phases. Send it to a current hot lead."
             ],
             spades: [
-                "Drop and do 15 fast pushups while yelling 'I am the champion!' on the last one.",
-                "Hold a standard physical plank position for 45 seconds while humming a song.",
-                "Show the group the last 3 things you searched for on your internet browser.",
-                "Try to pick up a playing card from the table using only your lips.",
-                "Let someone tie a towel or jacket around your waist like a diaper; wear it for a round.",
-                "Let the group draw a tiny smiley face on your forehead with a washable marker.",
-                "Mix a tiny splash of water, soda, and juice together and drink it like a shot.",
-                "Let the person to your right change your social media bio status for the next 10 minutes.",
-                "Blindfold yourself and try to guess who two players are just by touching their hands.",
-                "Do 10 jumping jacks while making a loud duck quacking sound on every single jump.",
-                "Put a piece of clear tape across your nose to look like a pig; wear it for 3 minutes.",
-                "Lie flat on the floor and wiggle around like a worm for 30 seconds.",
-                "Hand over your phone and let the group read your last 3 text messages out loud."
+                "Drop down right now and perform 20 rapid, explosive jump squats to jack up your heart rate and trigger your metabolism.",
+                "Set a physical timer for a 10-minute fast-paced walk around your block or immediate workspace area. Zero phone screens allowed.",
+                "Drop down and complete a max-effort mountain climber set for 45 seconds straight without pausing.",
+                "Perform 30 continuous high-knees in place, driving your knees all the way up to hip height with maximum speed.",
+                "Execute 20 clean, deep bodyweight squats, squeezing your glutes aggressively at the top of every repetition.",
+                "Stand completely up and perform 45 seconds of continuous, rapid shadowboxing to break up sedentary desk time.",
+                "Complete a continuous 60-second standard plank on your forearms, keeping your core absolutely locked and hollow.",
+                "Stand up right where you are and complete 35 rapid jumping jacks to force fresh blood and oxygen to your brain.",
+                "Perform 15 clean burpees back-to-back, adding a small vertical jump at the apex of each repetition.",
+                "Execute a strict 45-second wall sit, keeping your thighs completely parallel to the floor and your arms straight out.",
+                "Stand up, drink a large glass of ice-cold water immediately, and complete 2 minutes of active mobility and hamstring stretches.",
+                "Perform a 60-second active plank-to-pushup sequence, toggling between your hands and forearms with absolute stability.",
+                "Execute 20 lunges (10 per leg) focusing on maintaining absolute vertical posture and explosive leg drive."
             ],
             diamonds: [
-                "Act like a really fancy British butler and serve drinks/snacks to the room for a minute.",
-                "Give a 30-second business pitch for a company that sells designer clothes to dogs.",
-                "Pretend you just won the lottery and scream/celebrate at the top of your lungs for 15 seconds.",
-                "Do a dramatic runway model walk across the room using a pillow as a high-fashion hat.",
-                "Explain how to tie a shoe using the angriest voice you can possibly manage.",
-                "Bow down and apologize to a chair in the room for sitting on its relatives.",
-                "Give a highly intense, action-movie style breakdown of what you ate for breakfast.",
-                "Look at someone's palm and predict they will become a billionaire by selling rocks.",
-                "Have a dramatic slow-motion sword fight against an invisible ninja for 30 seconds.",
-                "Tell the group two truths and a lie about yourself, and make them guess the lie.",
-                "You can only speak in rhymes. If you fail to rhyme a sentence, do 5 jumping jacks.",
-                "Try to convince the room for 1 minute that you can secretly talk to spiders.",
-                "Give a beautiful, elegant toast to the room, but end it by calling everyone nerds."
+                "Review your standard design rates. Draft an optimized pricing tier sheet adding a 'premium plus' option that increases your package value by 20%.",
+                "Package one of your core custom mockup assets or ui components into an cleanly organized template zip file ready to scale on Gumroad.",
+                "Audit your primary portfolio layout or business profile. Remove any outdated projects that don't reflect your maximum capability.",
+                "Spend 15 minutes studying a highly technical tutorial on CSS layout architecture, advanced grids, or high-end interface animation concepts.",
+                "Isolate your last client contract or invoice template. Update the language to guarantee structural deposit collection and protect your timelines.",
+                "Analyze your current monthly business expenses. Cancel 1 useless application or digital subscription you aren't using actively.",
+                "Map out a recurring subscription or retainer plan (e.g., website updates, monthly ad assets) you can offer to your current client base.",
+                "Organize your local client project directories, asset kits, font libraries, and layout master files. Clear your desktop screen clutter completely.",
+                "Identify 3 areas in your current asset creation loop that slow you down. Build or source templates to automate those specific bottlenecks.",
+                "Spend 15 minutes breaking down a world-class award-winning website design. Pinpoint exactly how they handled typography and whitespace.",
+                "Draft an automated post-project onboarding or review request email to secure glowing testimonials from your successful client files.",
+                "Review your active design business goals for the current quarter. Write out the top 3 high-impact habits required to hit your financial milestones.",
+                "Spend 20 minutes wireframing or sketching a brand-new concept landing page for a fictional client in an incredibly lucrative industry."
             ],
             clubs: [
-                "Perform a 30-second dramatic dance expressing how hard it is to wake up in the morning.",
-                "Balance a plastic cup or an empty soda can on your head while walking in a full circle.",
-                "You can only answer questions with another question until your next card turn.",
-                "Act like a zombie who forgot why they were chasing humans and just wants a high-five.",
-                "Make 5 highly accurate animal noises in a row without laughing.",
-                "Spin around in a circle 5 times fast and then try to stand on one foot for 15 seconds.",
-                "Try to juggle two random small objects (like keys and a lighter) for 10 seconds.",
-                "Pretend your chair is a wild roller coaster and react with full physical movement for 30 seconds.",
-                "Let the player to your left style your hair into a ridiculous look using a single hair tie or clip.",
-                "Make the silliest face you can manage and hold it for 30 seconds without laughing.",
-                "Mime being trapped in a tiny glass box and try to find the invisible door.",
-                "Pick up any random item nearby and read its warning label out loud like a dramatic poem.",
-                "Pretend the floor is actual lava and navigate across the room without touching the ground."
+                "Drop down and perform a max-effort set of push-ups until technical failure, maintaining a perfect, flat-back plank line.",
+                "Perform 15 clean diamond push-ups to heavily isolate and overload your triceps and chest musculature.",
+                "Find a strong ledge, bar, or structural framework and complete a max-effort set of strict pull-ups or under-desk inverted rows.",
+                "Execute 20 slow tempo squats, taking a full 4 seconds to lower down and 2 seconds to explode back up to create deep muscular tension.",
+                "Execute 15 clean decline pushups with your feet elevated up on your desk chair or your studio couch.",
+                "Drop and hold a strict forearm plank for 90 seconds straight, flexing your abs, quads, and glutes with maximal intent.",
+                "Perform 20 deep walking lunges, focusing on heavy execution load on the front heel to drive leg development.",
+                "Execute 15 deep chair tricep dips, keeping your back tight to the surface and pausing for 1 full second at the bottom extension.",
+                "Perform a max-effort wall sit, but hold a heavy book, object, or your studio laptop straight out in front of you the entire time.",
+                "Complete 20 slow, controlled pike push-ups to place a massive muscle-building load on your shoulders and upper chest.",
+                "Execute 15 wide-stance push-ups immediately followed by 10 standard push-ups with zero rest between sets.",
+                "Drop down and perform 30 controlled bicycle crunches, emphasizing a hard 1-second muscle squeeze on every elbow-to-knee rotation.",
+                "Complete 25 consecutive bodyweight squats, immediately dropping into a 30-second low-squat static hold at the absolute bottom point."
             ],
             joker: {
-                red: ["RED JOKER CHOICE: Choose to skip this turn cleanly, redraw a fresh physical card, or safely claim double points on your next standard challenge card phase!"],
-                black: ["BLACK JOKER EVENT: Sudden Event! Draw another card instantly to complete for double points, or execute a strict 60-second time limit challenge mode!"]
+                red: ["RED JOKER CHOICE: Claim a clean operational pass to refine an existing design asset, or select any specific target challenge from the Wealth or Monetization decks for double reward status."],
+                black: ["BLACK JOKER GAIN EVENT: Forced physical execution block. Draw another card from either the Spades or Clubs deck instantly and complete it within a tight 90-second timeline for double point validation."]
             }
         };
 
-        // Alternative Backup Cache System Vault (Escalated Replay Challenge Dares)
+        // Alternative Backup Cache System Vault (Escalated Repeat Challenges)
         const backupDares = {
             hearts: [
-                "Eat a slice of bread with a heavy layer of mustard and mayo mixed together.",
-                "Let the group text the word 'Oops' to a completely random contact on your phone.",
-                "Bite into a raw onion or chew a slice of lemon without making any face for 15 seconds.",
-                "Reenact a funny TV commercial that you remember from your childhood.",
-                "Speak only in a spooky, ghostly whisper for the next full round of gameplay.",
-                "Let the group pick one photo from your camera roll to post to your social media story.",
-                "Pretend to call a store to complain that your new socks are making your feet too smart.",
-                "Give a 1-minute poetic tribute to a single piece of ice or a snack on the table.",
-                "Try to tickle yourself while keeping a completely deadpan, serious straight face.",
-                "Text a random friend: 'Quick, where are you hiding the cheese?' and don't reply.",
-                "Mime a full 30-second sequence of a cowboy riding a wildly out-of-control mechanical bull.",
-                "Do your best impression of a robot whose batteries are running out mid-sentence.",
-                "Sing a passionate love song to a random shoe in the room for 30 seconds."
+                "Find 2 companies running poorly targeted text ads on Google. Draft a concise 3-sentence value email showing how a custom landing page converts better.",
+                "Cold-pitch a local boutique, gym, or restaurant in your city by presenting them with a fresh, modern minimalist logo variant.",
+                "Send a professional update pitch message to a company you previously auditioned for or submitted a design proposal to.",
+                "Post 1 high-quality design tip or coding insight on your social channels to position yourself as an authority in web development.",
+                "Audit your target market segment. Identify 2 brand identities that feel outdated and make notes on how you would redesign their systems.",
+                "Reach out to an influential developer or designer in your field. Ask an insightful, highly technical question about their production system.",
+                "Draft an email pitching a strategic partnership to a local marketing agency that does not currently offer dedicated web design.",
+                "Redesign a terrible local restaurant menu layout. Send a clean JPEG copy directly to their public business page inbox.",
+                "Create a professional business profile outline on a new high-end freelance exchange platform or group.",
+                "Send an authentic message to a business owner whose work you admire. Detail exactly why their current branding is highly effective.",
+                "Build a clean sheet of 10 qualified local business leads, sourcing their direct email addresses and current mobile web URLs.",
+                "Record a 60-second video elevator pitch explaining how your design services systematically maximize corporate user conversion metrics.",
+                "Review a lead's current product presentation setup. Send them a message suggesting 2 high-end graphic improvements for their packaging."
             ],
             spades: [
-                "Do a 30-second physical wall-sit while loudly singing a nursery rhyme.",
-                "Balance a plastic cup full of water on the back of your hand while walking backwards.",
-                "Show the group the last 5 videos you watched on your YouTube or TikTok history.",
-                "Try to pick up a coin or a key from the floor using absolutely nothing but your teeth.",
-                "Allow the player to your right to draw a funny mustache on your face with a washable marker.",
-                "Do 5 fast burpees while yelling 'I am a fitness god!' on every upward jump.",
-                "Let a player put a single ice cube down your shirt; you can't move or scream for 10 seconds.",
-                "Allow the group to read the last email or text notification you received out loud.",
-                "Stand completely frozen like a living mannequin until another player completes their turn.",
-                "Do 10 pushups, but you must bark like an excited puppy every time you go down.",
-                "Close your eyes tightly and try to guess what 3 objects are just by touching them with your elbows.",
-                "Crawl backwards across the entire room like a speedy, high-tech stealth crab.",
-                "Hand over your phone; the group gets to read the very first line of your top personal note."
+                "Complete a 60-second active shadowboxing circuit, maximizing your speed and foot rotation metrics.",
+                "Drop down and execute 25 explosive mountain climbers, keeping your hip profile low and driving your feet cleanly.",
+                "Perform 20 continuous jumping jacks, instantly transitioning into a deep 30-second forearm plank line.",
+                "Execute 15 full body burpees back-to-back, minimizing your rest windows to drive an intense oxygen debt.",
+                "Stand up and do a strict 60-second wall sit, focusing entirely on long, rhythmic nasal breathing protocols.",
+                "Complete 20 deep bodyweight squats, taking a full 3 seconds to control the negative phase of each repetition.",
+                "Perform 12 high-impact jump squats, focusing on absolute vertical extension and explosive hip drive mechanics.",
+                "Stand up, drink a full glass of water, and execute 60 seconds of high-speed high-knees in place.",
+                "Complete a continuous 45-second side plank on your right elbow, followed immediately by 45 seconds on your left elbow.",
+                "Perform 20 alternative reverse lunges, driving backward with power and stabilizing your core mechanics.",
+                "Execute a continuous 60-second standard plank, rocking your heels forward and backward to shift your balance center.",
+                "Drop down and complete 15 clean leg raises, keeping your lower back pressed hard into the floor surface.",
+                "Stand up and execute a 2-minute active mobility flow for your shoulders, spine, and hip flexor groups."
             ],
             diamonds: [
-                "Pretend you are a medieval knight who is absolutely terrified of a modern microwave.",
-                "Summarize the entire plot of a famous movie in under 15 seconds without using character names.",
-                "Deliver a highly emotional, crying break-up speech directly to your own left shoe.",
-                "Walk exclusively in a wide-stance crab walk anytime you move for the next 3 minutes.",
-                "Try to convince the room with absolute serious confidence that the moon is made of cheese.",
-                "Act like a cheesy fashion influencer giving a tour of a completely empty cardboard box.",
-                "Describe your dream mansion using nothing but silly sound effects instead of real words.",
-                "Speak entirely in a gravelly, pirate accent until your next turn arrives.",
-                "Attempt to win an imaginary rap battle using completely non-rhyming, boring words.",
-                "Invent a brand-new game on the spot and explain its chaotic, funny rules to the group.",
-                "Act out a 30-second silent horror movie scene where you are being chased by a rogue pillow.",
-                "Give a grand, overly dramatic funeral speech for an empty, crumpled snack wrapper.",
-                "Spend 1 minute trying to convince the room that dogs are actually aliens sent to spy on us."
+                "Examine your current project delivery pipeline. Document 1 automated refinement to accelerate asset delivery speed.",
+                "Dedicate 15 minutes to studying structural typography laws, micro-interactions, or variable font setups.",
+                "Draft a standardized project scope brief designed to eliminate unauthorized client asset additions or scope creep.",
+                "Clean out your browser ecosystem: close all unproductive, distracting tabs and bookmarks instantly.",
+                "Isolate your design portfolio's primary hero text. Rewrite it to focus completely on the monetary value you create for businesses.",
+                "Review your business financial ledger. Calculate your precise financial baseline costs and track your target savings metrics.",
+                "Map out a multi-tiered package structure for high-end corporate clients, including premium branding extensions.",
+                "Audit the loading speed and mobile performance markers of your personal portfolio framework.",
+                "Create a centralized system file for all of your active design contracts, project briefs, and intake assets.",
+                "Analyze a premium digital layout. Deconstruct its grid coordinates to see how it achieves an upscale presentation.",
+                "Build a templated follow-up sequence designed to re-engage prospective leads who went quiet on you.",
+                "Spend 15 minutes drafting a clear outline for a custom UI system component kit you can reuse across web projects.",
+                "Write down a clean, concise breakdown of your core ideal client profile and their primary business pain points."
             ],
             clubs: [
-                "Do a dramatic runway walk across the room, but you must spin around on every third step.",
-                "Attempt to balance your smartphone flat on your forehead for 15 seconds while on one leg.",
-                "Communicate entirely in caveman grunts and wild hand gestures until the current round ends.",
-                "Act like a squirrel who just discovered chocolate; react to everything with extreme speed.",
-                "Recreate the exact sounds of an old dial-up internet connection using your voice box.",
-                "Spin around 5 times fast, then try to balance an open water bottle on your palm for 10 seconds.",
-                "Try to cleanly juggle a shoe and an apple at the same time without dropping them.",
-                "Pretend your chair is an off-road truck driving through a bumpy jungle safari.",
-                "Allow the group to choose your phone's lock screen wallpaper for the rest of the game night.",
-                "Make the most ridiculous face possible, take a selfie, and text it to your 3rd contact.",
-                "Mime the struggle of trying to escape from a giant, sticky jar of peanut butter.",
-                "Read the nutritional label of a nearby drink out loud like it's a dramatic thriller movie script.",
-                "Pretend the floor is actual lava; you must move across the room without your feet touching the floor."
+                "Execute another max-effort pushup set down to technical failure, focusing entirely on a slow 3-second lowering tempo.",
+                "Perform 15 strict close-grip push-ups, keeping your elbows tucked tight against your ribs to load the triceps.",
+                "Complete 20 deep bench or chair tricep dips, maximizing muscle contraction markers at the peak extension point.",
+                "Execute 15 slow tempo squats, pausing for 2 full seconds at the bottom point to eliminate elastic momentum.",
+                "Perform 12 strict pike push-ups, prioritizing clean vertical tracking and complete shoulder lockout on each rep.",
+                "Drop down and hold a strict hollow-body hold for 45 seconds straight, locking your core down completely.",
+                "Execute 20 explosive forward lunges, alternating legs while holding an item for core stabilization.",
+                "Complete 15 decline push-ups with your feet elevated high on an available studio chair or structural asset.",
+                "Hold a deep bodyweight squat at parallel depth for 45 seconds straight without shifting your weight center.",
+                "Execute 12 slow, controlled diamond push-ups, maintaining a straight line from your ears to your ankles.",
+                "Perform 15 wide-stance pushups, focusing completely on explosive chest contraction on the upward drive.",
+                "Complete 20 controlled flutter kicks while lying flat on your back, keeping your core totally engaged.",
+                "Execute 25 continuous deep bodyweight air squats to flood your lower body with metabolic density."
             ]
         };
 
-        // Navigation Engine Interface
+        // Navigation Interface
         function navigateTo(screenId) {
             const currentActive = document.querySelector('.screen.active');
             if (currentActive) {
@@ -314,7 +314,7 @@
             navigateTo('screen-reveal');
         }
 
-        // Matrix Rendering Code
+        // Matrix Rendering Engine
         function renderValueGrid() {
             const container = document.getElementById('value-grid-container');
             const title = document.getElementById('value-screen-title');
@@ -328,8 +328,6 @@
                 const isUsed = gameState.completedCards.has(cardKey);
                 
                 const cardEl = document.createElement('div');
-                
-                // Incorporate visual state class modifier if card has been chosen previously
                 cardEl.className = isUsed ? 'card-item completed-once' : 'card-item';
                 cardEl.style.color = `var(--color-${currentSuit})`;
                 cardEl.innerText = rank;
@@ -374,7 +372,7 @@
                 finalDare = dareDatabase.joker[val][0];
                 levelString = "Wildcard";
                 pointsValue = 250;
-                dareTitle.innerText = "THE JOKER WILD CARD";
+                dareTitle.innerText = "THE JOKER EVENT";
             } else {
                 valDisplay.innerText = val;
                 suitDisplay.innerText = gameState.currentSelection.suitSymbol;
@@ -382,28 +380,27 @@
 
                 const rankIndex = cardRanks.indexOf(val);
                 
-                // DYNAMIC UPDATING CHECK: Reroute layout securely to alternate backup cache on match
                 if (gameState.completedCards.has(cardKey)) {
-                    finalDare = backupDares[suit][rankIndex] || "Perform 10 jumping jacks right now!";
-                    dareTitle.innerText = "ALTERNATE BACKUP DARE";
-                    pointsValue = 150; // Boosted point value scaling tier for duplicate cards
+                    finalDare = backupDares[suit][rankIndex] || "Drop and complete 20 fast squats right now!";
+                    dareTitle.innerText = "UPGRADED BACKUP ACTION";
+                    pointsValue = 150; 
                     stageContainer.classList.add('alternate-dare-active');
                 } else {
                     finalDare = dareDatabase[suit][rankIndex];
-                    dareTitle.innerText = "THE DARE CHALLENGE";
+                    dareTitle.innerText = "THE EXECUTION ACTION";
                     
                     if (['J','Q','K','A'].includes(val)) {
-                        levelString = "Hard";
+                        levelString = "Hard / High Value";
                         pointsValue = 200;
                     } else if (parseInt(val) <= 5) {
-                        levelString = "Easy";
+                        levelString = "Easy / Fast Drill";
                         pointsValue = 100;
                     }
                 }
             }
 
             diffBadge.innerText = levelString;
-            ptsBadge.innerText = `+${pointsValue} PTS`;
+            ptsBadge.innerText = `+${pointsValue} XP`;
             dareText.innerText = finalDare;
             ptsBadge.dataset.pendingPoints = pointsValue;
 
@@ -418,7 +415,6 @@
             const val = gameState.currentSelection.val;
             const cardKey = `${suit}-${val}`;
 
-            // Push selection straight to the look-up hash set tracker
             gameState.completedCards.add(cardKey);
             
             const ptsBadge = document.getElementById('reveal-points');
@@ -429,7 +425,7 @@
 
             document.getElementById('stat-score').innerText = gameState.score;
             document.getElementById('stat-progress').innerText = `${gameState.completedCount}/54`;
-            document.getElementById('celebration-stat-summary').innerText = `Score: ${gameState.score} | Completed: ${gameState.completedCount}`;
+            document.getElementById('celebration-stat-summary').innerText = `Total XP: ${gameState.score} | Dares Completed: ${gameState.completedCount}`;
 
             navigateTo('screen-celebration');
         }
